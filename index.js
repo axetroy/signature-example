@@ -2,6 +2,7 @@ const crypto = require("crypto");
 const Koa = require("koa");
 const Router = require("koa-router");
 const bodyParser = require("koa-bodyparser");
+const { format } = require("date-fns");
 
 const port = process.env.PORT || 3000;
 const saltKey = "123456";
@@ -10,8 +11,10 @@ const app = new Koa();
 app.use(bodyParser());
 
 function signature(data) {
+  const timestamp = format(new Date(), "YYYYMMDDHH");
+
   const hash = crypto
-    .createHmac("sha256", saltKey)
+    .createHmac("sha256", timestamp + saltKey)
     .update(JSON.stringify(data), "utf8")
     .digest("hex");
 
