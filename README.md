@@ -11,6 +11,8 @@
 
 延伸一下，甚至可以参考 `JWT` 实现一个比较复杂的实现，例如`签名过期`，`签发者`, `自定义算法`等等
 
+之前写过一篇 [JWT 的原理](https://github.com/axetroy/blog/issues/177), 可以产考一下.
+
 ### 工作原理
 
 [![Workflow](workflow.jpg)](workflow.jpg)
