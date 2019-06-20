@@ -24,6 +24,9 @@ function signature(data) {
 }
 
 const router = new Router();
+router.get("/", (ctx, next) => {
+  ctx.body = "hello world";
+});
 router.post("/signature", (ctx, next) => {
   const data = ctx.request.body;
   ctx.body = signature(data);
