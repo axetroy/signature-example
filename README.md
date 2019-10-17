@@ -26,5 +26,5 @@ curl -H "Content-Type:application/json" -X POST -d '{"amount": "1.00", "to":"use
 ### 携带数据签名请求
 
 ```bash
-curl -H "X-Signature:Zjk4YTE5OTQ4MjZiNDM5MzYwOTE1NzdjYjQ2NmMyMmZmMTNjZmIzNDg1MjIxMTM0ZGVlZDI3ZGMzMGFjZmFlMw==" -H "Content-Type:application/json" -X POST -d '{"amount": "1.00", "to":"user_id"}' https://signature-example.herokuapp.com/signature
+curl -H "X-Signature:返回的数据签名" -H "Content-Type:application/json" -X POST -d '{"amount": "1.00", "to":"user_id"}' https://signature-example.herokuapp.com/transfer
 ```
